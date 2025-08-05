@@ -31,4 +31,5 @@ li{
 .actives{
   border: 3px solid orange;
   border-radius: 100%;padding: 2px;
+  background-color: #4d4d4d23;
 }
