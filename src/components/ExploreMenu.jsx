@@ -4,7 +4,7 @@ import { div } from "framer-motion/client";
 
 const ExploreMenu = ({ category, setCategory }) => {
   return (
-    <div>
+    <div id="explore-menu">
       <h1 className=" text-[24px] font-medium">Explore our menu</h1>
       <p className="w-[710px] mt-2 mb-10">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente ipsam
