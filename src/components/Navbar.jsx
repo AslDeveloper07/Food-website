@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-between items-center container py-[20px]">
       <img src={icons.logo} alt="" className="w-[120px]" />
-      <ul className="nav flex justify-between gap-4">
+      <ul className="nav flex justify-between gap-8">
         <li
           onClick={() => setMenu("Home")}
           className={menu === "Home" ? "active" : ""}
@@ -38,7 +38,7 @@ const Navbar = () => {
         <img
           src={icons.search_icon}
           alt=""
-          className="w-[23px] cursor-pointer"
+          className="w-[20px] cursor-pointer"
         />
         <div className="relative">
           <img

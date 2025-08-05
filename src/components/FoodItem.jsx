@@ -13,7 +13,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
           src={image}
           alt=""
           className="transform hover:scale-103 transition duration-300"
-        /> 
+        />
         {!cartItems[id] ? (
           <img
             onClick={() => addToCart(id)}

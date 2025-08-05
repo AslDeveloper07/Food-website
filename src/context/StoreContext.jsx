@@ -24,10 +24,9 @@ const StoreContextProvider = (props) => {
     }));
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     console.log(cartItems);
-
-  }, [cartItems])
+  }, [cartItems]);
 
   const contextValue = {
     food_list,
