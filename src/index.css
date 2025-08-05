@@ -33,5 +33,18 @@ li {
   border: 3px solid orange;
   border-radius: 100%;
   padding: 2px;
-  background-color: #4d4d4d23;
+}
+input {
+  border: 1px solid rgba(128, 128, 128, 0.357);
+  outline: none;
+  padding: 8px 10px;
+  font-size: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+input:focus {
+  border: 1px solid rgb(255, 136, 0);
+}
+input::placeholder {
+  font-size: 14px;
 }
