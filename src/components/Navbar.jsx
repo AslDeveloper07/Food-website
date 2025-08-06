@@ -12,28 +12,28 @@ const Navbar = ({ setShowLogin }) => {
         <Link
           to="/"
           onClick={() => setMenu("Home")}
-          className={menu === "Home" ? "text-orange-500 font-semibold" : ""}
+          className={menu === "Home" ? "text-orange-500 " : ""}
         >
           Home
         </Link>
         <a
           href="#explore-menu"
           onClick={() => setMenu("Menu")}
-          className={menu === "Menu" ? "text-orange-500 font-semibold" : ""}
+          className={menu === "Menu" ? "text-orange-500 " : ""}
         >
           Menu
         </a>
         <a
           href="#app-download"
           onClick={() => setMenu("Mobile-app")}
-          className={menu === "Mobile-app" ? "text-orange-500 font-semibold" : ""}
+          className={menu === "Mobile-app" ? "text-orange-500 " : ""}
         >
           Mobile-app
         </a>
         <a
           href="#footer"
           onClick={() => setMenu("Contact-Us")}
-          className={menu === "Contact-Us" ? "text-orange-500 font-semibold" : ""}
+          className={menu === "Contact-Us" ? "text-orange-500 " : ""}
         >
           Contact-Us
         </a>
