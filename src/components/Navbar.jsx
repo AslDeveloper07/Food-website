@@ -6,7 +6,7 @@ import { StoreContext } from "../context/StoreContext";
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("Home");
 
-  const {getTotalCartAmount}= useContext(StoreContext)
+  const { getTotalCartAmount } = useContext(StoreContext);
   return (
     <div className="flex justify-between items-center container py-[20px]">
       <img src={icons.logo} alt="logo" className="w-[120px]" />
@@ -42,26 +42,27 @@ const Navbar = ({ setShowLogin }) => {
       </ul>
 
       <div className="flex justify-between items-center gap-6">
-        <Link to='/'>
-        <img
-          src={icons.search_icon}
-          alt="search"
-          className="w-[20px] cursor-pointer"
-        />
-        </Link>
-        <div className="relative">
-          <Link to="/cart">
+        <Link to="/">
           <img
-            src={icons.basket_icon}
-            alt="basket"
-            className="w-[23px] cursor-pointer"
+            src={icons.search_icon}
+            alt="search"
+            className="w-[20px] cursor-pointer"
           />
-          </Link>
+        </Link>
+       <div className="relative">
+  <Link to="/cart">
+    <img
+      src={icons.basket_icon}
+      alt="basket"
+      className="w-[23px] cursor-pointer"
+    />
+    {getTotalCartAmount() > 0 && (
+  <div className="absolute top-[4px] right-[-5px] min-w-[10px] min-h-[10px] bg-red-500 rounded-full"></div>
+)}
 
-  <div className="absolute min-w-[10px] min-h-[10px] bg-red-500 rounded-full top-[4px] right-[-5px]"></div>
+  </Link>
+</div>
 
-
-        </div>
         <button
           onClick={() => setShowLogin(true)}
           className="border py-2 px-6 rounded-full text-[15px] cursor-pointer hover:bg-orange-100 transition duration-300"

@@ -2,11 +2,12 @@ import React, { useContext } from "react";
 import { StoreContext } from "../context/StoreContext";
 
 const Tables = () => {
-  const { food_list, cartItems, removeFormCart, getTotalCartAmount } = useContext(StoreContext);
+  const { food_list, cartItems, removeFormCart, getTotalCartAmount } =
+    useContext(StoreContext);
 
   const deliveryFee = 2;
 
-  const cartItemsList = food_list.filter(item => cartItems[item._id] > 0);
+  const cartItemsList = food_list.filter((item) => cartItems[item._id] > 0);
 
   const subtotal = cartItemsList.reduce((total, item) => {
     return total + item.price * cartItems[item._id];
@@ -62,13 +63,13 @@ const Tables = () => {
           </div>
           <div className="flex justify-between mb-2 border-b border-slate-300 py-2">
             <p>Delivery Fee</p>
-            <p>${getTotalCartAmount()+2}</p>
+            <p>${getTotalCartAmount() + 2}</p>
           </div>
           <div className="flex justify-between font-semibold text-lg">
             <p>Total</p>
             <p>${total}</p>
           </div>
-          <button className="bg-orange-600 hover:bg-orange-700 text-white mt-6 py-2 px-6 rounded-md transition duration-300">
+          <button onClick={()=>navigate('/order')} className="bg-orange-600 hover:bg-orange-700 text-white mt-6 py-2 px-6 rounded-md transition duration-300">
             PROCEED TO CHECKOUT
           </button>
         </div>
@@ -78,20 +79,19 @@ const Tables = () => {
             If you have a promo code, Enter it here
           </p>
           <div className="relative flex h-10  w-full   bg-white rounded-lg ">
-  <input
-    type="email"
-    placeholder="Promo Code"
-    required
-    className="h-full w-full rounded-lg border border-slate-300 bg-transparent px-3 pr-[70px] text-sm font-normal text-slate-700 outline-none transition-all duration-150 ease-in-outpeer"
-  />
-  <button
-    type="button"
-    className="absolute right-1 top-1 bottom-1 z-10 w-[65px] rounded-[4px] bg-orange-500 text-white px-2 py-1 text-[12px] font-semibold uppercase transition-all duration-500 ease-in-out cursor-pointer "
-  >
-    Invite
-  </button>
-</div>
-
+            <input
+              type="email"
+              placeholder="Promo Code"
+              required
+              className="h-full w-full rounded-lg border border-slate-300 bg-transparent px-3 pr-[70px] text-sm font-normal text-slate-700 outline-none transition-all duration-150 ease-in-outpeer"
+            />
+            <button
+              type="button"
+              className="absolute right-1 top-1 bottom-1 z-10 w-[65px] rounded-[4px] bg-orange-500 text-white px-2 py-1 text-[12px] font-semibold uppercase transition-all duration-500 ease-in-out cursor-pointer "
+            >
+              Invite
+            </button>
+          </div>
         </div>
       </div>
     </div>
