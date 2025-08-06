@@ -7,7 +7,7 @@ const LoginPopup = ({ setShowLogin }) => {
   return (
     <div
       onClick={() => setShowLogin(false)}
-      className="fixed z-200 bg-[#4d4d4d48] w-full h-[100vh] top-0 left-0"
+      className="fixed z-200 bg-[#2d2d2d86] w-full h-[100vh] top-0 left-0"
     >
       <form  className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white flex flex-col py-7 px-8 w-[400px] h-fit z-50 shadow-md rounded-xl">
         <div className="flex justify-between items-center mb-6">

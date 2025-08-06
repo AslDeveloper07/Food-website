@@ -53,7 +53,8 @@ const Navbar = ({ setShowLogin }) => {
             src={icons.basket_icon}
             alt="basket"
             className="w-[23px] cursor-pointer"
-          /></Link>
+          />
+          </Link>
           <div className="absolute min-w-[10px] min-h-[10px] bg-red-500 rounded-full top-[4px] right-[-5px]"></div>
         </div>
         <button
