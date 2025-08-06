@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { icons } from "../assets/frontend_assets/assets";
 import { Link, Links } from "react-router-dom";
+import { StoreContext } from "../context/StoreContext";
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("Home");
 
+  const {getTotalCartAmount}= useContext(StoreContext)
   return (
     <div className="flex justify-between items-center container py-[20px]">
       <img src={icons.logo} alt="logo" className="w-[120px]" />
@@ -55,7 +57,10 @@ const Navbar = ({ setShowLogin }) => {
             className="w-[23px] cursor-pointer"
           />
           </Link>
-          <div className="absolute min-w-[10px] min-h-[10px] bg-red-500 rounded-full top-[4px] right-[-5px]"></div>
+
+  <div className="absolute min-w-[10px] min-h-[10px] bg-red-500 rounded-full top-[4px] right-[-5px]"></div>
+
+
         </div>
         <button
           onClick={() => setShowLogin(true)}
