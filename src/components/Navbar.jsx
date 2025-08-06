@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { icons } from "../assets/frontend_assets/assets";
-import { Link } from "react-router-dom";
+import { Link, Links } from "react-router-dom";
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("Home");
@@ -40,17 +40,20 @@ const Navbar = ({ setShowLogin }) => {
       </ul>
 
       <div className="flex justify-between items-center gap-6">
+        <Link to='/'>
         <img
           src={icons.search_icon}
           alt="search"
           className="w-[20px] cursor-pointer"
         />
+        </Link>
         <div className="relative">
+          <Link to="/cart">
           <img
             src={icons.basket_icon}
             alt="basket"
             className="w-[23px] cursor-pointer"
-          />
+          /></Link>
           <div className="absolute min-w-[10px] min-h-[10px] bg-red-500 rounded-full top-[4px] right-[-5px]"></div>
         </div>
         <button
