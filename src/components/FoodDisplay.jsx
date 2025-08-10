@@ -12,7 +12,8 @@ const FoodDisplay = ({ category }) => {
 
       <div className="container flex-wrap flex gap-6 justify-center">
         {food_list.map((food, i) => {
-          {console.log(category, food.category);
+          {
+            console.log(category, food.category);
           }
           if (category === "All" || category === food.category) {
             return (

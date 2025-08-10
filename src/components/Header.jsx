@@ -1,12 +1,12 @@
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 const Header = () => {
-  const titleRef = useRef(null)
-  const paragraphRef = useRef(null)
+  const titleRef = useRef(null);
+  const paragraphRef = useRef(null);
 
   useEffect(() => {
-    const letters = titleRef.current.querySelectorAll('.letter')
+    const letters = titleRef.current.querySelectorAll(".letter");
 
     gsap.fromTo(
       letters,
@@ -15,10 +15,10 @@ const Header = () => {
         y: 0,
         opacity: 1,
         duration: 0.6,
-        ease: 'bounce.out',
+        ease: "bounce.out",
         stagger: 0.05,
       }
-    )
+    );
 
     gsap.fromTo(
       paragraphRef.current,
@@ -27,13 +27,13 @@ const Header = () => {
         opacity: 1,
         y: 0,
         duration: 1,
-        ease: 'power2.out',
+        ease: "power2.out",
         delay: 1,
       }
-    )
-  }, [])
+    );
+  }, []);
 
-  const title = 'Order your favourite food here'
+  const title = "Order your favourite food here";
 
   return (
     <div className="header h-[32rem] my-[20px] mx-0 relative">
@@ -42,9 +42,9 @@ const Header = () => {
           className="title font-medium text-white text-4xl flex flex-wrap"
           ref={titleRef}
         >
-          {title.split('').map((char, index) => (
+          {title.split("").map((char, index) => (
             <span key={index} className="letter inline-block">
-              {char === ' ' ? '\u00A0' : char}
+              {char === " " ? "\u00A0" : char}
             </span>
           ))}
         </h2>
@@ -63,7 +63,7 @@ const Header = () => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

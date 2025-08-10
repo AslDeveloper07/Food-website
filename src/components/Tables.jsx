@@ -69,7 +69,10 @@ const Tables = () => {
             <p>Total</p>
             <p>${total}</p>
           </div>
-          <button onClick={()=>navigate('/order')} className="bg-orange-600 hover:bg-orange-700 text-white mt-6 py-2 px-6 rounded-md transition duration-300">
+          <button
+            onClick={() => navigate("/order")}
+            className="bg-orange-600 hover:bg-orange-700 text-white mt-6 py-2 px-6 rounded-md transition duration-300"
+          >
             PROCEED TO CHECKOUT
           </button>
         </div>

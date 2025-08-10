@@ -49,19 +49,18 @@ const Navbar = ({ setShowLogin }) => {
             className="w-[20px] cursor-pointer"
           />
         </Link>
-       <div className="relative">
-  <Link to="/cart">
-    <img
-      src={icons.basket_icon}
-      alt="basket"
-      className="w-[23px] cursor-pointer"
-    />
-    {getTotalCartAmount() > 0 && (
-  <div className="absolute top-[4px] right-[-5px] min-w-[10px] min-h-[10px] bg-red-500 rounded-full"></div>
-)}
-
-  </Link>
-</div>
+        <div className="relative">
+          <Link to="/cart">
+            <img
+              src={icons.basket_icon}
+              alt="basket"
+              className="w-[23px] cursor-pointer"
+            />
+            {getTotalCartAmount() > 0 && (
+              <div className="absolute top-[4px] right-[-5px] min-w-[10px] min-h-[10px] bg-red-500 rounded-full"></div>
+            )}
+          </Link>
+        </div>
 
         <button
           onClick={() => setShowLogin(true)}

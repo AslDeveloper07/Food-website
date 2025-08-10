@@ -9,7 +9,7 @@ const LoginPopup = ({ setShowLogin }) => {
       onClick={() => setShowLogin(false)}
       className="fixed z-200 bg-[#2d2d2d86] w-full h-[100vh] top-0 left-0"
     >
-      <form  className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white flex flex-col py-7 px-8 w-[400px] h-fit z-50 shadow-md rounded-xl">
+      <form className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white flex flex-col py-7 px-8 w-[400px] h-fit z-50 shadow-md rounded-xl">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-xl font-semibold ">{currState}</h2>
           <img

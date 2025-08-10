@@ -10,7 +10,6 @@ const PlaceOrder = () => {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* LEFT: Delivery Information */}
         <div>
           <h2 className="text-xl font-semibold mb-6">Delivery Information</h2>
           <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -62,7 +61,6 @@ const PlaceOrder = () => {
           </form>
         </div>
 
-        {/* RIGHT: Cart Totals */}
         <div>
           <h2 className="text-xl font-semibold mb-6">Cart Totals</h2>
           <div className="flex justify-between border-b border-slate-300 py-2">
